@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.coforge.day5;
 
 import java.util.Iterator;
@@ -52,3 +53,59 @@ public class LinkedListTest {
 	}
 
 }
+=======
+package com.coforge.day5;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+
+
+public class LinkedListTest {
+
+	public static void main(String[] args) {
+		List<Integer> list = new LinkedList<>();
+		
+		list.add(new Integer(10)); // Boxing
+		list.add(20);
+		list.add(30);
+		list.add(40);
+		list.add(50);
+		list.add(20);
+		
+		System.out.println(list);
+		
+		System.out.println(list.get(1));
+
+		
+		//Remove
+		System.out.println(list.remove(1));
+
+		System.out.println(list);
+
+		//Update
+		System.out.println(list.set(4, 70));
+		
+		System.out.println(list);
+
+		//Traverse using Index
+		for(int i = 0 ;i < list.size() ; i++) {
+			System.out.println(list.get(i));
+		}
+		
+		// Traverse without INdex
+		
+		for(Integer i : list) {
+			System.out.println(i);
+		}
+		
+		//Traverse Using Iterator 
+		Iterator<Integer> it = list.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+	}
+
+}
+>>>>>>> 21cb1583aead817d5fdb6759c6b55cbf04131396
