@@ -1,0 +1,11 @@
+package com.coforge.day4;
+
+public class Test {
+
+	public static void main(String[] args) {
+		B bb = new B();
+		
+
+	}
+
+}
