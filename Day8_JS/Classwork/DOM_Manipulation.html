@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+.myStyle {
+color : blue;
+}
+</style>
+
+<script type="text/javascript">
+
+function createDOM() {
+	const myElement = document.createElement("h1");
+	myElement.textContent = "DOM MANIPULATION";
+	myElement.setAttribute("id" , "MyH1");
+	document.body.appendChild(myElement);
+}
+
+
+function updateDOM() {
+	const myElement = document.getElementById("MyH1");
+	myElement.textContent = "NEW TEXT";	
+}
+
+
+function changeDOMStyle() {
+	const myElement = document.getElementById("MyH1");
+	myElement.classList.add("myStyle");	
+}
+
+
+function removeDOM() {
+	const myElement = document.getElementById("MyH1");
+	myElement.remove();	
+}
+
+
+</script>
+</head>
+<body>
+
+<br>
+<button onclick="createDOM()"> Create DOM </button>
+<button onclick="updateDOM()"> Update DOM </button>
+<button onclick="changeDOMStyle()"> Change DOM Style </button>
+<button onclick="removeDOM()"> Remove DOM </button>
+</body>
+</html>

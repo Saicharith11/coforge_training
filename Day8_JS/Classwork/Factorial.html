@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function fact() {
+
+		var n1 = parseInt(document.getElementById("n1").value);
+		var res = "" , facto = 1;
+		
+		res = "<table border='1' width='60%'>";
+		res += "<tr><th>Number</th><th>Factorial</th></tr>";
+
+		for(let i = 1 ; i <= n1 ; i++) {
+			
+			facto = facto * i;
+			res += "<tr><td>" + i + "</td><td>" + facto + "</td>";
+			
+		}
+		res += "</table>";		
+		document.getElementById("ResultDiv").innerHTML = res;
+	}
+</script>
+</head>
+<body>
+Enter Number
+<input type="number" id="n1" />
+<br>
+
+<button onclick="fact()">Factorial Table</button>
+
+
+<br>
+<div id = "ResultDiv">
+</div>
+
+
+</body>
+</html>
