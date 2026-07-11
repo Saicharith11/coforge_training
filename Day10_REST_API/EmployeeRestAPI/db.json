@@ -1,0 +1,29 @@
+{
+  "employees": [
+    {
+      "Eid": 100,
+      "firstName": "Sai Charith",
+      "lastName": "Chittamuru",
+      "email": "cherry@gmail.com",
+      "mobileNumber": "9100893392",
+      "id": "A8QO3eLno7o"
+    },
+    {
+      "Eid": 101,
+      "firstName": "Rahul",
+      "lastName": "Agarwal",
+      "email": "rahul@gmail.com",
+      "mobileNumber": "8905428591",
+      "id": "2qNm2NB5LpU"
+    },
+    {
+      "Eid": 103,
+      "firstName": "Priya",
+      "lastName": "Reddy",
+      "email": "priya@gmail.com",
+      "mobileNumber": "7980981236",
+      "id": "046H-u1SdC4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
