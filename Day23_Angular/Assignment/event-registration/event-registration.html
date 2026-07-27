@@ -1,0 +1,12 @@
+<h2>Event Registration Form Assignment 5</h2>
+
+<div>
+  <!-- Inputs bound to TypeScript variables -->
+  <p>Name: <input type="text" [(ngModel)]="Name"></p>
+  <p>Email: <input type="email" [(ngModel)]="Email"></p>
+  <p>Course: <input type="text" [(ngModel)]="Course"></p>
+
+  <!-- Event Binding on (click) -->
+  <button (click)="onRegister()">Register</button>
+  <button (click)="onReset()">Reset</button>
+</div>
