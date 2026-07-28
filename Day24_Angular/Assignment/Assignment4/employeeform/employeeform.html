@@ -1,0 +1,173 @@
+<h2>Employee Registration Form Assignment 4</h2>
+
+<form #employeeForm="ngForm" (ngSubmit)="onSubmit()">
+
+  <table>
+
+    <tr>
+      <td>Employee ID</td>
+      <td>
+        <input
+          type="number"
+          name="employeeId"
+          [(ngModel)]="employeeId"
+          #empId="ngModel"
+          required>
+      </td>
+      <td>
+        <span *ngIf="empId.invalid && empId.touched">
+          Employee ID is required
+        </span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Employee Name</td>
+      <td>
+        <input
+          type="text"
+          name="employeeName"
+          [(ngModel)]="employeeName"
+          #empName="ngModel"
+          required>
+      </td>
+      <td>
+        <span *ngIf="empName.invalid && empName.touched">
+          Employee Name is required
+        </span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Email</td>
+      <td>
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          #mail="ngModel"
+          required
+          email>
+      </td>
+      <td>
+        <span *ngIf="mail.invalid && mail.touched">
+          Enter a valid Email
+        </span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Mobile Number</td>
+      <td>
+        <input
+          type="text"
+          name="mobile"
+          [(ngModel)]="mobile"
+          #mobileNo="ngModel"
+          required
+          pattern="[0-9]{10}">
+      </td>
+      <td>
+        <span *ngIf="mobileNo.invalid && mobileNo.touched">
+          Enter a valid 10-digit Mobile Number
+        </span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Department</td>
+      <td>
+        <select
+          name="department"
+          [(ngModel)]="department"
+          #dept="ngModel"
+          required>
+
+          <option value="">Select Department</option>
+          <option>HR</option>
+          <option>Finance</option>
+          <option>IT</option>
+          <option>Marketing</option>
+
+        </select>
+      </td>
+      <td>
+        <span *ngIf="dept.invalid && dept.touched">
+          Department is required
+        </span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Gender</td>
+      <td>
+
+        <input
+          type="radio"
+          name="gender"
+          value="Male"
+          [(ngModel)]="gender"
+          #gen="ngModel"
+          required> Male
+
+        <input
+          type="radio"
+          name="gender"
+          value="Female"
+          [(ngModel)]="gender"
+          required> Female
+
+      </td>
+      <td>
+        <span *ngIf="gen.invalid && gen.touched">
+          Select Gender
+        </span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Date of Joining</td>
+      <td>
+        <input
+          type="date"
+          name="joiningDate"
+          [(ngModel)]="joiningDate"
+          #doj="ngModel"
+          required>
+      </td>
+      <td>
+        <span *ngIf="doj.invalid && doj.touched">
+          Date of Joining is required
+        </span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Salary</td>
+      <td>
+        <input
+          type="number"
+          name="salary"
+          [(ngModel)]="salary"
+          #sal="ngModel"
+          required
+          min="1">
+      </td>
+      <td>
+        <span *ngIf="sal.invalid && sal.touched">
+          Salary must be greater than 0
+        </span>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="3" align="center">
+        <button type="submit" [disabled]="employeeForm.invalid">
+          Submit
+        </button>
+      </td>
+    </tr>
+
+  </table>
+
+</form>

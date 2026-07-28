@@ -1,0 +1,42 @@
+<h2>Student Result Assignment 3</h2>
+
+<table border="1">
+
+    <tr>
+        <th>S.No</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Marks</th>
+        <th>Status</th>
+    </tr>
+
+    <tr *ngFor="let student of students; let i=index">
+
+        <td>{{i+1}}</td>
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.marks}}</td>
+
+        <td>
+
+            <span *ngIf="student.marks>=35">
+                Pass
+            </span>
+
+            <span *ngIf="student.marks<35">
+                Fail
+            </span>
+
+        </td>
+
+    </tr>
+
+</table>
+
+<br>
+
+<h3>Total Students : {{students.length}}</h3>
+
+<h3>Pass Count : {{passCount}}</h3>
+
+<h3>Fail Count : {{failCount}}</h3>

@@ -1,0 +1,20 @@
+<h2>Employee Dashboard Assignment 1</h2>
+
+<button (click)="toggleEmployee()">
+    Toggle Employee
+</button>
+
+<div *ngIf="isEmployeeAvailable; else noEmployee">
+
+    <h3>Employee Details</h3>
+
+    <p>Employee ID : {{ employeeId }}</p>
+    <p>Name : {{ employeeName }}</p>
+    <p>Salary : ₹{{ employeeSalary }}</p>
+    <p>Department : {{ departmentNumber }}</p>
+
+</div>
+
+<ng-template #noEmployee>
+    <h3>No Employee Found</h3>
+</ng-template>

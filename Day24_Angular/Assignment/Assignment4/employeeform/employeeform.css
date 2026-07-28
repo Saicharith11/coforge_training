@@ -1,0 +1,21 @@
+table{
+    margin:auto;
+}
+
+td{
+    padding:8px;
+}
+
+input,select{
+    width:220px;
+    padding:5px;
+}
+
+span{
+    color:red;
+    font-size:14px;
+}
+
+button{
+    padding:8px 15px;
+}
